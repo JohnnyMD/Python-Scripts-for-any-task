@@ -9,7 +9,8 @@ def external_merge_sort(n: int, source: open, sink: open, file_opener = open, ke
             and merge these onto the <sink> file.
     '''
     start_EMST = time()
-    print("\nGoing to sort the single batches...\n")
+    print("\nBatch size:  < {} >  Bytes".format(n) )
+    print("\nGoing to sort the single batches...\n" )
     # store SORTED chunks into files of size n
     mergers = []
     i = 0
