@@ -25,7 +25,7 @@ def external_merge_sort(n: int, source: open, sink: open, file_opener = open, ke
         merge_me.write(''.join(lines))
         mergers.append(merge_me)
         merge_me.seek(0)
-        print("\tTime passed to sort {} batches: <".format(i), (time() - start_EMST)/60, "> min\n")
+        print("\tTime passed to sort {} batches: < {} >  min\n".format( i, (time() - start_EMST)/60 ) )
  
     # merge onto sink
     print("\nGoing to merge the sorted files...\n")
@@ -42,4 +42,4 @@ def external_merge_sort(n: int, source: open, sink: open, file_opener = open, ke
             mergers[i].close()
             del mergers[i]  # __del__ method of file_opener should delete the file
             
-    print("\tDone !\n\n\tTime passed for EXTERNAL MERGE SORTING of the big file: <", (time() - start_EMST)/60, "> min\n")  
+    print("\tDone !\n\n\tTime passed for EXTERNAL MERGE SORTING of the big file: < {} >  min\n".format( (time() - start_EMST)/60 ) )  
